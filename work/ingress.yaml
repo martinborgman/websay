@@ -1,0 +1,13 @@
+apiVersion: projectcontour.io/v1
+kind: HTTPProxy
+metadata:
+  name: websay
+spec:
+  virtualhost:
+    fqdn: app.192.168.149.128.xip.io
+  routes:
+    - conditions:
+        - prefix: /
+      services:
+        - name: websay
+          port: 80
