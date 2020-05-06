@@ -1,0 +1,24 @@
+apiVersion: tekton.dev/v1beta1
+kind: TaskRun
+metadata:
+  name: example-run
+spec:
+  serviceAccountName: build-service
+  taskRef:
+    name: buildpacks-v3
+  params:
+  - name: BUILDER_IMAGE
+    value: gcr.io/paketo-buildpacks/builder:tiny
+  resources:
+    inputs:
+      - name: source
+        resourceRef:
+          name: websay-git
+    outputs:
+    - name: image
+      resourceSpec:
+        type: image
+        params:
+        - name: url
+          value: martinborgman/websay:tekton-live
+  

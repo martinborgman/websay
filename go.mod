@@ -1,4 +1,4 @@
-module github.com/bryanl/websay
+module github.com/martinborgman/websay
 
 go 1.14
 
