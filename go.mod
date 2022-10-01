@@ -2,7 +2,7 @@ module github.com/martinborgman/websay
 
 go 1.18
 
-require github.com/labstack/echo/v4 v4.7.2
+require github.com/labstack/echo/v4 v4.9.0
 
 require (
 	github.com/Code-Hex/go-wordwrap v1.0.0 // indirect
