@@ -1,4 +1,4 @@
-FROM golang:1.14 AS builder
+FROM golang:1.18 AS builder
 
 ENV CGO_ENABLED=0 \
     GOOS=linux \
@@ -8,7 +8,7 @@ WORKDIR /workspace
 
 COPY go.mod .
 COPY go.sum .
-RUN go mod download
+RUN go mod download -x
 COPY . .
 RUN go build -o ./build/websay .
 
