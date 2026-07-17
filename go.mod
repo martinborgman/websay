@@ -11,7 +11,4 @@ require (
 	github.com/rivo/uniseg v0.4.3 // indirect
 )
 
-require (
-	github.com/Code-Hex/Neo-cowsay v1.0.4
-	golang.org/x/time v0.15.0 // indirect
-)
+require github.com/Code-Hex/Neo-cowsay v1.0.4
